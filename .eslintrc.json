@@ -20,6 +20,7 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "@typescript-eslint/no-explicit-any": "error",
         "no-console": [
           "error", 
           { 
@@ -30,7 +31,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "app",
+            "prefix": "youtube",
             "style": "camelCase"
           }
         ],
@@ -38,7 +39,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "app",
+            "prefix": "youtube",
             "style": "kebab-case"
           }
         ]
