@@ -7,5 +7,5 @@ export interface SearchResponce {
     'totalResults': number,
     'resultsPerPage': number
   },
-  'items': SearchItem
+  'items': Array<SearchItem>
 }
