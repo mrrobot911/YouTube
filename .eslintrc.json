@@ -20,6 +20,14 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "import/no-extraneous-dependencies": [
+          "error", 
+          {
+            "devDependencies": false, 
+            "optionalDependencies": false, 
+            "peerDependencies": false
+          }
+        ],
         "@typescript-eslint/no-explicit-any": "error",
         "no-console": [
           "error", 
