@@ -1,0 +1,24 @@
+:host {
+    position: absolute;
+    right: 20vw;
+}
+:host button {
+    margin-left: 20px;
+    color: #FFFFFF;   
+    background-color: #2F80ED;
+    box-shadow: 2px 0px 4px 0px #2F80ED;
+    flex-shrink: 0;
+    border-radius: 4px;
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+}
+:host button .mat-icon::ng-deep{
+    margin: -2px;
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    border-radius: 4px;
+    min-width: 24px;
+    border: none;
+}
