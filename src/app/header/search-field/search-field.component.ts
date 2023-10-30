@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'youtube-search-field',
@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-field.component.scss'],
 })
 export default class SearchFieldComponent {
+  public buttonValue = 'search';
 
+  public filter = false;
+
+  public value = '';
+
+  @Output()
+    outShowFilterBlock = new EventEmitter<boolean>();
+
+  @Output()
+    outShowCards = new EventEmitter<string>();
+
+  public showFilterBlock() {
+    this.filter = !this.filter;
+    this.outShowFilterBlock.emit(this.filter);
+  }
+
+  public showCards() {
+    this.outShowCards.emit(this.value);
+  }
 }

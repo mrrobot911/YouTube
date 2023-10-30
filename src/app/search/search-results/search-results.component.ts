@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'youtube-search-results',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-results.component.scss'],
 })
 export default class SearchResultsComponent {
+  @Input()
+    showCards = '';
 }

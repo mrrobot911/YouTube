@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'youtube-search-item',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-item.component.scss'],
 })
 export default class SearchItemComponent {
-
+  @Input()
+    showFilterBlock = false;
 }

@@ -1,8 +1,10 @@
-<p>Sorting by:</p>
-<div class="filter_container">
-    <button>date</button>
-    <button>count of views</button>
-    <button>by word or sentance</button>
+<div *ngIf="showFilterBlock" class="filter_container">
+    <p>Sorting by:</p>
+    <div class="filter_container_buttons">
+        <button>date</button>
+        <button>count of views</button>
+        <button>by word or sentance</button>
+    </div>
+    <input />
 </div>
-<input />
 

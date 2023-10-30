@@ -1,5 +1,12 @@
-<youtube-header></youtube-header>
-<youtube-search-item></youtube-search-item>
-<youtube-search-results></youtube-search-results>
+<youtube-header
+  (outShowCards)="showCards($event)"
+  (outShowFilterBlock)="showFilterBlock($event)"
+></youtube-header>
+<youtube-search-item
+  [showFilterBlock]="parentFilterCards"
+></youtube-search-item>
+<youtube-search-results
+  [showCards]="parentShowCards"
+></youtube-search-results>
 
 <router-outlet></router-outlet>
