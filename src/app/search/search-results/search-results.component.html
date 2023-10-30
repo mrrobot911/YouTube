@@ -33,7 +33,7 @@
     <h2>{{card.snippet.channelTitle}}</h2>
     <button mat-flat-button >more</button>
   </mat-card-content>
-  <mat-card-footer>
+  <mat-card-footer youtubeCardColour [youtubeCardColour]="card.snippet.publishedAt">
     <mat-progress-bar></mat-progress-bar>
   </mat-card-footer>
 </mat-card>
