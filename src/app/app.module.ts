@@ -14,6 +14,7 @@ import SearchItemComponent from './search/search-item/search-item.component';
 import SearchResultsComponent from './search/search-results/search-results.component';
 import SearchFieldComponent from './header/search-field/search-field.component';
 import AuthComponent from './header/auth/auth.component';
+import { CardItemComponent } from './search/search-results/card-item/card-item.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import AuthComponent from './header/auth/auth.component';
     SearchResultsComponent,
     SearchFieldComponent,
     AuthComponent,
+    CardItemComponent,
   ],
   imports: [
     BrowserModule,
