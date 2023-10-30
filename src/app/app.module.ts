@@ -8,7 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatRadioModule } from '@angular/material/radio';
 
 import AppRoutingModule from './app-routing.module';
 import AppComponent from './app.component';
@@ -37,7 +36,6 @@ import AuthComponent from './header/auth/auth.component';
     MatIconModule,
     MatCardModule,
     MatProgressBarModule,
-    MatRadioModule,
     FormsModule,
   ],
   providers: [],
