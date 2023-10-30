@@ -4,9 +4,13 @@
 ></youtube-header>
 <youtube-search-item
   [showFilterBlock]="parentFilterCards"
+  (outDate)="filterDate($event)"
+  (outView)="filterView($event)"
 ></youtube-search-item>
 <youtube-search-results *ngIf="parentShowCards !== ''"
   [showCards]="parentShowCards"
+  [filterDate]="parentDate"
+  [filterView]="parentView"
 ></youtube-search-results>
 
 <router-outlet></router-outlet>

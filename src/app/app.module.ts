@@ -17,6 +17,8 @@ import SearchResultsComponent from './search/search-results/search-results.compo
 import SearchFieldComponent from './header/search-field/search-field.component';
 import AuthComponent from './header/auth/auth.component';
 import CardColourDirective from './derectives/card-colour.directive';
+import DataPipe from './pipes/data.pipe';
+import ViewPipe from './pipes/view.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import CardColourDirective from './derectives/card-colour.directive';
     SearchFieldComponent,
     AuthComponent,
     CardColourDirective,
+    DataPipe,
+    ViewPipe,
   ],
   imports: [
     BrowserModule,

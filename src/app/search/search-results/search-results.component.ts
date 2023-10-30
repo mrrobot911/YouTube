@@ -11,5 +11,11 @@ export default class SearchResultsComponent {
   @Input()
     showCards = '';
 
+  @Input()
+    filterDate = false;
+
+  @Input()
+    filterView = false;
+
   responseCardsArrey: SearchItem[] = mockEntities.items;
 }
