@@ -6,6 +6,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatRadioModule } from '@angular/material/radio';
 
 import AppRoutingModule from './app-routing.module';
 import AppComponent from './app.component';
@@ -14,7 +17,6 @@ import SearchItemComponent from './search/search-item/search-item.component';
 import SearchResultsComponent from './search/search-results/search-results.component';
 import SearchFieldComponent from './header/search-field/search-field.component';
 import AuthComponent from './header/auth/auth.component';
-import { CardItemComponent } from './search/search-results/card-item/card-item.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,6 @@ import { CardItemComponent } from './search/search-results/card-item/card-item.c
     SearchResultsComponent,
     SearchFieldComponent,
     AuthComponent,
-    CardItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +35,9 @@ import { CardItemComponent } from './search/search-results/card-item/card-item.c
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatRadioModule,
     FormsModule,
   ],
   providers: [],

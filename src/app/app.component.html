@@ -5,7 +5,7 @@
 <youtube-search-item
   [showFilterBlock]="parentFilterCards"
 ></youtube-search-item>
-<youtube-search-results
+<youtube-search-results *ngIf="parentShowCards !== ''"
   [showCards]="parentShowCards"
 ></youtube-search-results>
 
