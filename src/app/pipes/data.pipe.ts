@@ -2,9 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { SearchItem } from '../search/search-item.model';
 
 @Pipe({
-  name: 'datePipe',
+  name: 'dateOrderPipe',
 })
-export default class OrderPipe implements PipeTransform {
+export default class DateOrderPipe implements PipeTransform {
   // eslint-disable-next-line class-methods-use-this
   transform(cards: SearchItem[], value: boolean): SearchItem[] {
     if (!value) {
