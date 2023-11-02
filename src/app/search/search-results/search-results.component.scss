@@ -1,0 +1,35 @@
+:host {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 31px;
+    gap: 50px;
+}
+:host .card {
+    text-align: center;
+    background-color: #E5E5E5;
+    width: 264px;
+    height: 327px; 
+}
+:host button {
+    color: #FFFFFF;   
+    background-color: #2F80ED;
+    box-shadow: 2px 0px 4px 0px #2F80ED;
+    flex-shrink: 0;
+    border-radius: 4px;
+    width: 80px;
+    height: 24px;
+}
+:host mat-card-content {
+    height: 100%;
+}
+:host .activity {
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+    margin-top: 21px;
+    font-size: 10px;
+}
+:host img {
+    width: 230px;
+}

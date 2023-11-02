@@ -1,0 +1,23 @@
+:host .filter_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+    height: 50px;
+}
+:host p{
+    margin: 0px;
+    color: #929292;
+}
+:host button {
+    border: none;
+    color: #2F80ED;
+    text-decoration: underline;
+    cursor: pointer;
+}
+:host .filter_container_buttons {
+    margin-left: 11px;
+    margin-right: 10px;
+    display: flex;
+    gap: 21px;
+}

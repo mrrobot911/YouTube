@@ -1,0 +1,10 @@
+<div class="search">
+  <img class="search_logo" src="assets/logo.png" alt="youtube logo">
+  <mat-form-field class="form_field" appearance="outline">
+    <input matInput placeholder="What are you want to find out?" [(ngModel)]="value"/>
+  </mat-form-field>
+  <button mat-flat-button (click)="showCards()">{{buttonValue|titlecase}}</button>
+  <button mat-flat-button class="tune" (click)="showFilterBlock()">
+    <img class="tune_logo" src="assets/tune.svg" alt="tune image">
+  </button>
+</div>
