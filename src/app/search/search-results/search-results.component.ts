@@ -17,5 +17,8 @@ export default class SearchResultsComponent {
   @Input()
     filterView = false;
 
+  @Input()
+    filterWord = '';
+
   responseCardsArrey: SearchItem[] = mockEntities.items;
 }

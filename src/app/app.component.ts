@@ -16,6 +16,8 @@ export default class AppComponent {
 
   parentView = false;
 
+  parentWord = '';
+
   public showCards(value: string) {
     this.parentShowCards = value;
   }
@@ -30,5 +32,9 @@ export default class AppComponent {
 
   public filterView(value: boolean) {
     this.parentView = value;
+  }
+
+  public filterWord(value: string) {
+    this.parentWord = value;
   }
 }

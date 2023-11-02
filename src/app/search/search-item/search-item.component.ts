@@ -12,6 +12,8 @@ export default class SearchItemComponent {
 
   public view = false;
 
+  public search = '';
+
   @Input()
     showFilterBlock = false;
 
@@ -21,6 +23,9 @@ export default class SearchItemComponent {
   @Output()
     outView = new EventEmitter<boolean>();
 
+  @Output()
+    outWord = new EventEmitter<string>();
+
   public filterDate() {
     this.date = !this.date;
     this.outDate.emit(this.date);
@@ -29,5 +34,9 @@ export default class SearchItemComponent {
   public filterView() {
     this.view = !this.view;
     this.outView.emit(this.view);
+  }
+
+  public filterWord() {
+    this.outWord.emit(this.search);
   }
 }

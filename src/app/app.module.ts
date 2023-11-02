@@ -19,6 +19,7 @@ import AuthComponent from './header/auth/auth.component';
 import CardColourDirective from './derectives/card-colour.directive';
 import DataPipe from './pipes/data.pipe';
 import ViewPipe from './pipes/view.pipe';
+import ContainsPipe from './pipes/contains.pipe';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import ViewPipe from './pipes/view.pipe';
     CardColourDirective,
     DataPipe,
     ViewPipe,
+    ContainsPipe,
   ],
   imports: [
     BrowserModule,
