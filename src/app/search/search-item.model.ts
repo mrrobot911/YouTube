@@ -1,8 +1,8 @@
-type Thumbnails = {
+interface Thumbnails {
   url: string,
   width: number,
   height: number,
-};
+}
 interface ThumbnailsList {
   default: Thumbnails,
   medium: Thumbnails,
@@ -10,17 +10,17 @@ interface ThumbnailsList {
   standard: Thumbnails,
   maxres: Thumbnails
 }
-type Statistics = {
+interface Statistics {
   viewCount: string,
   likeCount: string,
   dislikeCount: string,
   favoriteCount: string,
   commentCount: string
-};
-type Localized = {
+}
+interface Localized {
   title: string,
   description: string
-};
+}
 interface Snippet {
   publishedAt: string,
   channelId: string,
