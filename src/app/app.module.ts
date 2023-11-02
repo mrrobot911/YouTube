@@ -20,6 +20,7 @@ import CardColourDirective from './derectives/card-colour.directive';
 import DataPipe from './pipes/data.pipe';
 import ViewPipe from './pipes/view.pipe';
 import ContainsPipe from './pipes/contains.pipe';
+import MyButtonComponent from './shared/my-button/my-button.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import ContainsPipe from './pipes/contains.pipe';
     MatCardModule,
     MatProgressBarModule,
     FormsModule,
+    MyButtonComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
