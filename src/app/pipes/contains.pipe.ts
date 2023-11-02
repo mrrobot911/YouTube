@@ -7,10 +7,9 @@ import { SearchItem } from '../search/search-item.model';
 export default class ContainsPipe implements PipeTransform {
   // eslint-disable-next-line class-methods-use-this
   transform(cards: SearchItem[], value: string): SearchItem[] {
-    if (!value) {
+    if (value === '') {
       return cards;
     }
-
     return cards.filter((p) => p.snippet.title.toLowerCase().includes(value.toLowerCase().trim()));
   }
 }

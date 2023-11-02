@@ -3,8 +3,8 @@
     <div class="filter_container_buttons">
         <button (click)="filterDate()">date</button>
         <button (click)="filterView()">count of views</button>
-        <button (click)="filterWord()">by word or sentance</button>
+        <label for=".searchInput">by word or sentance</label>
     </div>
-    <input [(ngModel)]="search"/>
+    <input class="searchInput" [(ngModel)]="search" (input)="filterWord()"/>
 </div>
 
