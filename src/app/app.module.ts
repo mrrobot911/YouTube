@@ -11,15 +11,15 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import AppRoutingModule from './app-routing.module';
 import AppComponent from './app.component';
-import HeaderComponent from './header/header.component';
-import SearchItemComponent from './search/search-item/search-item.component';
-import SearchResultsComponent from './search/search-results/search-results.component';
-import SearchFieldComponent from './header/search-field/search-field.component';
-import AuthComponent from './header/auth/auth.component';
-import CardColourDirective from './derectives/card-colour.directive';
-import DataPipe from './pipes/data.pipe';
-import ViewPipe from './pipes/view.pipe';
-import ContainsPipe from './pipes/contains.pipe';
+import HeaderComponent from './core/header/header.component';
+import SearchItemComponent from './youtube/components/search/search-item/search-item.component';
+import SearchResultsComponent from './youtube/components/search/search-results/search-results.component';
+import SearchFieldComponent from './core/header/search-field/search-field.component';
+import AuthComponent from './auth/components/auth/auth.component';
+import CardColourDirective from './youtube/derectives/card-colour.directive';
+import DataPipe from './youtube/pipes/data.pipe';
+import ViewPipe from './youtube/pipes/view.pipe';
+import ContainsPipe from './youtube/pipes/contains.pipe';
 import MyButtonComponent from './shared/my-button/my-button.component';
 
 @NgModule({

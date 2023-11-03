@@ -1,4 +1,4 @@
-import { SearchResponce } from '../search/search-response.model';
+import { SearchResponce } from '../youtube/models/search-response.model';
 
 const mockEntities: SearchResponce = {
   kind: 'youtube#videoListResponse',
