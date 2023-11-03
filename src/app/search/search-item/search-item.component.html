@@ -1,0 +1,10 @@
+<div *ngIf="showFilterBlock" class="filter_container">
+    <p>Sorting by:</p>
+    <div class="filter_container_buttons">
+        <button (click)="filterDate()">date</button>
+        <button (click)="filterView()">count of views</button>
+        <label for=".searchInput">by word or sentance</label>
+    </div>
+    <input class="searchInput" [(ngModel)]="search" (input)="filterWord()"/>
+</div>
+
