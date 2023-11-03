@@ -21,6 +21,7 @@ import DataPipe from './youtube/pipes/data.pipe';
 import ViewPipe from './youtube/pipes/view.pipe';
 import ContainsPipe from './youtube/pipes/contains.pipe';
 import MyButtonComponent from './shared/my-button/my-button.component';
+import SvgIconComponent from './shared/svg-icon/svg-icon.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import MyButtonComponent from './shared/my-button/my-button.component';
     MatProgressBarModule,
     FormsModule,
     MyButtonComponent,
+    SvgIconComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
