@@ -11,9 +11,9 @@ import { CommonModule } from '@angular/common';
 export default class SvgIconComponent {
   @Input() icon!: string;
 
-  @Input() width?: number;
+  @Input() width?: number = 20;
 
-  @Input() height?: number;
+  @Input() height?: number = 13;
 
   @Input() size?: number = 24;
 
