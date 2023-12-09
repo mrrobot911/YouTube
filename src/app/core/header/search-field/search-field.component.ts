@@ -10,7 +10,7 @@ import SearchService from '../../services/search.service';
   styleUrls: ['./search-field.component.scss'],
 })
 export default class SearchFieldComponent {
-  private readonly searchService: SearchService = inject(SearchService);
+  constructor(private readonly searchService: SearchService) {}
 
   public buttonValue = 'search';
 

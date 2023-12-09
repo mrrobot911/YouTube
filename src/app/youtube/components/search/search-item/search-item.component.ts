@@ -1,5 +1,5 @@
 import {
-  Component, EventEmitter, Output, inject,
+  Component, EventEmitter, Output,
 } from '@angular/core';
 import SearchService from 'src/app/core/services/search.service';
 
@@ -9,7 +9,7 @@ import SearchService from 'src/app/core/services/search.service';
   styleUrls: ['./search-item.component.scss'],
 })
 export default class SearchItemComponent {
-  private readonly searchService: SearchService = inject(SearchService);
+  constructor(private readonly searchService: SearchService) {}
 
   public date = false;
 
@@ -17,7 +17,7 @@ export default class SearchItemComponent {
 
   public search = '';
 
-  public showFilterBlock = this.searchService.getIsShowCards();
+  public showFilterBlock = this.searchService.showFilterBlock;
 
   @Output()
     outDate = new EventEmitter<boolean>();

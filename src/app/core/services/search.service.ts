@@ -1,28 +1,16 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export default class SearchService {
-  private showFilterBlock = false;
+  public showFilterBlock = { a: false };
 
-  private showCards = '';
-
-  public filter = false;
+  public showCards = { search: '' };
 
   public setCards(value: string) {
-    this.showCards = value;
+    this.showCards = { search: value };
   }
 
   public setShowCards() {
-    this.showFilterBlock = !this.showFilterBlock;
-  }
-
-  public getCards() {
-    return this.showCards;
-  }
-
-  public getIsShowCards() {
-    return this.showFilterBlock;
+    this.showFilterBlock.a = !this.showFilterBlock.a;
   }
 }

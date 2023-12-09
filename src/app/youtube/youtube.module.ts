@@ -16,6 +16,7 @@ import MyButtonComponent from '../shared/my-button/my-button.component';
 import SvgIconComponent from '../shared/svg-icon/svg-icon.component';
 import CardColourDirective from './derectives/card-colour.directive';
 import MainPageComponent from './pages/main-page/main-page.component';
+import SearchService from '../core/services/search.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,9 @@ import MainPageComponent from './pages/main-page/main-page.component';
   exports: [
     SearchItemComponent,
     SearchResultsComponent,
+  ],
+  providers: [
+    SearchService,
   ],
 })
 export default class YoutubeModule { }

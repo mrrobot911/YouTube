@@ -1,14 +1,7 @@
-<!-- <youtube-search-item
-  [showFilterBlock]="parentFilterCards"
-  (outDate)="filterDate($event)"
-  (outView)="filterView($event)"
-  (outWord)="filterWord($event)"
+<youtube-search-item
 >
 </youtube-search-item>
-<youtube-search-results *ngIf="parentShowCards !== ''"
-  [showCards]="parentShowCards"
-  [filterDate]="parentDate"
-  [filterView]="parentView"
-  [filterWord]="searchService.value"
+<p>1:{{showCards.search}}</p>
+<youtube-search-results *ngIf="showCards.search !== ''"
 >
-</youtube-search-results> -->
+</youtube-search-results>

@@ -9,6 +9,7 @@ import SearchFieldComponent from './header/search-field/search-field.component';
 import HeaderComponent from './header/header.component';
 import AuthComponent from './header/auth/auth.component';
 import NotfoundComponent from './pages/notfound/notfound.component';
+import SearchService from './services/search.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,9 @@ import NotfoundComponent from './pages/notfound/notfound.component';
   exports: [
     HeaderComponent,
     SearchFieldComponent,
+  ],
+  providers: [
+    SearchService,
   ],
 })
 export default class CoreModule { }
