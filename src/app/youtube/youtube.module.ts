@@ -15,6 +15,7 @@ import DataPipe from './pipes/data.pipe';
 import MyButtonComponent from '../shared/my-button/my-button.component';
 import SvgIconComponent from '../shared/svg-icon/svg-icon.component';
 import CardColourDirective from './derectives/card-colour.directive';
+import MainPageComponent from './pages/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import CardColourDirective from './derectives/card-colour.directive';
     ViewPipe,
     ContainsPipe,
     CardColourDirective,
+    MainPageComponent,
   ],
   imports: [
     CommonModule,

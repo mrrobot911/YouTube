@@ -1,4 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+  Component, inject,
+} from '@angular/core';
+import { FormControl } from '@angular/forms';
+import SearchService from '../../services/search.service';
 
 @Component({
   selector: 'youtube-search-field',
@@ -6,24 +10,28 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./search-field.component.scss'],
 })
 export default class SearchFieldComponent {
+  private readonly searchService: SearchService = inject(SearchService);
+
   public buttonValue = 'search';
 
-  public filter = false;
-
-  public value = '';
-
-  @Output()
-    outShowFilterBlock = new EventEmitter<boolean>();
-
-  @Output()
-    outShowCards = new EventEmitter<string>();
-
   public showFilterBlock() {
-    this.filter = !this.filter;
-    this.outShowFilterBlock.emit(this.filter);
+    this.searchService.setShowCards();
   }
+
+  // public searchControl = this.searchService.getSearchvalue();
+  public searchControl = new FormControl<string>('', { nonNullable: true });
 
   public showCards() {
-    this.outShowCards.emit(this.value);
+    this.searchService.setCards();
   }
+
+  ngOnInit() {
+    this.searchControl.valueChanges.subscribe((value) => {
+      this.searchService.updateSearchValue(value);
+    });
+  }
+
+  // ChangeInput() {
+  //   this.searchService.updateSearchValue(this.value);
+  // }
 }
