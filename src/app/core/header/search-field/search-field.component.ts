@@ -18,20 +18,9 @@ export default class SearchFieldComponent {
     this.searchService.setShowCards();
   }
 
-  // public searchControl = this.searchService.getSearchvalue();
   public searchControl = new FormControl<string>('', { nonNullable: true });
 
   public showCards() {
-    this.searchService.setCards();
+    this.searchService.setCards(this.searchControl.value);
   }
-
-  ngOnInit() {
-    this.searchControl.valueChanges.subscribe((value) => {
-      this.searchService.updateSearchValue(value);
-    });
-  }
-
-  // ChangeInput() {
-  //   this.searchService.updateSearchValue(this.value);
-  // }
 }
