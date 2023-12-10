@@ -13,14 +13,14 @@ export default class AuthPageComponent {
     this.error = null;
   }
 
-  form: FormGroup = new FormGroup({
+  myGroup = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
   });
 
   submit() {
-    if (this.form.valid) {
-      this.submitEM.emit(this.form.value);
+    if (this.myGroup.valid) {
+      this.submitEM.emit(this.myGroup.value);
     }
   }
 

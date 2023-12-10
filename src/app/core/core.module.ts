@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 import SearchFieldComponent from './header/search-field/search-field.component';
 import HeaderComponent from './header/header.component';
 import AuthComponent from './header/auth/auth.component';
@@ -26,6 +27,7 @@ import ToggleService from './services/toggle.service';
     MatInputModule,
     MatIconModule,
     FormsModule,
+    RouterModule,
     ReactiveFormsModule,
   ],
   exports: [
