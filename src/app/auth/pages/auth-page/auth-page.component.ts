@@ -1,7 +1,8 @@
 import {
-  Component, EventEmitter, Input, Output,
+  Component,
 } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'youtube-auth-page',
@@ -9,22 +10,19 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./auth-page.component.scss'],
 })
 export default class AuthPageComponent {
-  constructor() {
-    this.error = null;
-  }
+  constructor(private router: Router) {}
 
   myGroup = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
   });
 
+  public error = this.myGroup.errors;
+
   submit() {
     if (this.myGroup.valid) {
-      this.submitEM.emit(this.myGroup.value);
+      localStorage.setItem('user', JSON.stringify(this.myGroup.value));
+      this.router.navigate(['/main']);
     }
   }
-
-  @Input() error: string | null;
-
-  @Output() submitEM = new EventEmitter();
 }
