@@ -2,6 +2,7 @@ import {
   Component, EventEmitter, Output,
 } from '@angular/core';
 import SearchService from 'src/app/core/services/search.service';
+import ToggleService from 'src/app/core/services/toggle.service';
 
 @Component({
   selector: 'youtube-search-item',
@@ -9,7 +10,10 @@ import SearchService from 'src/app/core/services/search.service';
   styleUrls: ['./search-item.component.scss'],
 })
 export default class SearchItemComponent {
-  constructor(private readonly searchService: SearchService) {}
+  constructor(
+    private readonly searchService: SearchService,
+    private readonly toggleService: ToggleService,
+  ) {}
 
   public date = false;
 
@@ -17,7 +21,7 @@ export default class SearchItemComponent {
 
   public search = '';
 
-  public showFilterBlock = this.searchService.showFilterBlock;
+  public showFilterBlock = this.toggleService.showFilterBlock;
 
   @Output()
     outDate = new EventEmitter<boolean>();

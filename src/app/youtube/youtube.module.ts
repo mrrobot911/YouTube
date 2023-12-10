@@ -17,6 +17,7 @@ import SvgIconComponent from '../shared/svg-icon/svg-icon.component';
 import CardColourDirective from './derectives/card-colour.directive';
 import MainPageComponent from './pages/main-page/main-page.component';
 import SearchService from '../core/services/search.service';
+import ToggleService from '../core/services/toggle.service';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import SearchService from '../core/services/search.service';
   ],
   providers: [
     SearchService,
+    ToggleService,
   ],
 })
 export default class YoutubeModule { }

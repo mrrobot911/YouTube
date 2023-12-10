@@ -10,6 +10,7 @@ import HeaderComponent from './header/header.component';
 import AuthComponent from './header/auth/auth.component';
 import NotfoundComponent from './pages/notfound/notfound.component';
 import SearchService from './services/search.service';
+import ToggleService from './services/toggle.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import SearchService from './services/search.service';
   ],
   providers: [
     SearchService,
+    ToggleService,
   ],
 })
 export default class CoreModule { }
