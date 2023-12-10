@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export default class SearchService {
-  public showCards = '';
+  public searchValue = { search: '' };
 
   public setCards(value: string) {
-    this.showCards = value;
+    this.searchValue.search = value;
   }
 }

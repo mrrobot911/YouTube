@@ -9,5 +9,5 @@ import SearchService from 'src/app/core/services/search.service';
 export default class MainPageComponent {
   constructor(private readonly searchService: SearchService) {}
 
-  public showCards = this.searchService.showCards;
+  public showCards = this.searchService.searchValue;
 }

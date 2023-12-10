@@ -18,6 +18,7 @@ import CardColourDirective from './derectives/card-colour.directive';
 import MainPageComponent from './pages/main-page/main-page.component';
 import SearchService from '../core/services/search.service';
 import ToggleService from '../core/services/toggle.service';
+import FilterService from './services/filter.service';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import ToggleService from '../core/services/toggle.service';
   providers: [
     SearchService,
     ToggleService,
+    FilterService,
   ],
 })
 export default class YoutubeModule { }

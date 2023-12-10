@@ -1,4 +1,4 @@
-<mat-card class="card"*ngFor="let card of responseCardsArrey | dateOrderPipe:filterDate | viewPipe:filterView | containsPipe:filterWord">
+<mat-card class="card"*ngFor="let card of responseCardsArrey | dateOrderPipe:filterState.date| viewPipe:filterState.view| containsPipe:filterState.searchWord">
   <mat-card-header>
     <img  [src]="card.snippet.thumbnails.medium.url" alt="video preview">
   </mat-card-header>

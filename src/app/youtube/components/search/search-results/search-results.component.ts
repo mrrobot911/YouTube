@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import mockEntities from 'src/app/db/response';
 import { SearchItem } from 'src/app/youtube/models/search-item.model';
+import FilterService from 'src/app/youtube/services/filter.service';
 
 @Component({
   selector: 'youtube-search-results',
@@ -8,17 +9,11 @@ import { SearchItem } from 'src/app/youtube/models/search-item.model';
   styleUrls: ['./search-results.component.scss'],
 })
 export default class SearchResultsComponent {
-  @Input()
-    showCards = '';
+  constructor(
+    private readonly filterService: FilterService,
+  ) {}
 
-  @Input()
-    filterDate = false;
-
-  @Input()
-    filterView = false;
-
-  @Input()
-    filterWord = '';
+  public filterState = this.filterService.filter;
 
   responseCardsArrey: SearchItem[] = mockEntities.items;
 }

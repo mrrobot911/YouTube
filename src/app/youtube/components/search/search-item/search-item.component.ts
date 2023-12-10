@@ -1,8 +1,8 @@
 import {
-  Component, EventEmitter, Output,
+  Component,
 } from '@angular/core';
-import SearchService from 'src/app/core/services/search.service';
 import ToggleService from 'src/app/core/services/toggle.service';
+import FilterService from 'src/app/youtube/services/filter.service';
 
 @Component({
   selector: 'youtube-search-item',
@@ -11,38 +11,23 @@ import ToggleService from 'src/app/core/services/toggle.service';
 })
 export default class SearchItemComponent {
   constructor(
-    private readonly searchService: SearchService,
     private readonly toggleService: ToggleService,
+    private readonly filterService: FilterService,
   ) {}
 
-  public date = false;
-
-  public view = false;
-
-  public search = '';
+  public search = this.filterService.filter.searchWord;
 
   public showFilterBlock = this.toggleService.showFilterBlock;
 
-  @Output()
-    outDate = new EventEmitter<boolean>();
-
-  @Output()
-    outView = new EventEmitter<boolean>();
-
-  @Output()
-    outWord = new EventEmitter<string>();
-
   public filterDate() {
-    this.date = !this.date;
-    this.outDate.emit(this.date);
+    this.filterService.filterDate();
   }
 
   public filterView() {
-    this.view = !this.view;
-    this.outView.emit(this.view);
+    this.filterService.filterView();
   }
 
   public filterWord() {
-    this.outWord.emit(this.search);
+    this.filterService.filterWord(this.search);
   }
 }
